@@ -2,8 +2,7 @@ require_relative 'config/environment'
 
 class App < Sinatra::Base
   get '/reversename/:name' do
-    @reverse_name = params[:name].reverse
-    "#{@reverse_name}"
+    params[:name].reverse
   end
 
   get '/square/:number' do
@@ -29,13 +28,15 @@ class App < Sinatra::Base
   get '/:operation/:number1/:number2' do
     num_1 = params[:number1].to_i
     num_2 = params[:number2].to_i
-    if params[:operation] == "add"
+
+    case params[:operation]
+    when "add"
       @total = num_1 + num_2
-    elsif params[:operation] == "subtract"
+    when "subtract"
       @total = num_2 - num_1
-    elsif params[:operation] == "multiply"
+    when "multiply"
       @total = num_1 * num_2
-    elsif params[:operation] == "divide"
+    when "divide"
       @total = num_1 / num_2
     end
     "#{@total}"
