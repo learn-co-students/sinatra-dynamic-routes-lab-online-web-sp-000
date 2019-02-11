@@ -33,7 +33,7 @@ class App < Sinatra::Base
     when "add"
       @total = num_1 + num_2
     when "subtract"
-      @total = num_2 - num_1
+      @total = num_1 - num_2
     when "multiply"
       @total = num_1 * num_2
     when "divide"
