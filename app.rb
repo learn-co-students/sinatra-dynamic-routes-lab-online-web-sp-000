@@ -71,7 +71,7 @@ class App < Sinatra::Base
         # SOLLUTION
         num1 = params[:number1].to_i
         num2 = params[:number2].to_i
-        answer = 'Unable to perform this operation'
+        answer = 'Something just came up, hit me later."
 
         case params[:operation]
         when 'add'
