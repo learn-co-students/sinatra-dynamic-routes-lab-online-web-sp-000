@@ -42,7 +42,6 @@ class App < Sinatra::Base
        else 
         @result = (@number1 / @number2).to_s
        end
-       "#{@result}"
       end
 
     
