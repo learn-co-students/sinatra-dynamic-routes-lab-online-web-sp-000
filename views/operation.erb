@@ -1,0 +1,11 @@
+  
+<% case @operation
+when "add" %>
+<%= @number_1 + @number_2 %>
+<% when "subtract" %>
+<%= @number_1 - @number_2 %>
+<% when "multiply" %>
+<%= @number_1 * @number_2 %>
+<% when "divide" %>
+<%= @number_1 / @number_2 %>
+<% end %>
