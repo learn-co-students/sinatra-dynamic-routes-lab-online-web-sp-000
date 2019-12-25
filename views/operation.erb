@@ -1,0 +1,26 @@
+<%# Write your code here! %>
+<%#Operation.erb>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+  </head>
+  
+  <body>
+
+    <% case @operation
+    when "add" %>
+    <h1> <%= @num1 + @num2 %> </h1>
+    <% when "subtract" %>
+   <h1> <%= @num1 - @num2 %> </h1>
+    <% when "multiply" %>
+   <h1>  <%= @num1 * @num2 %> </h1>
+    <% when "divide" %>
+    <h1> <%= @num1 / @num2 %> </h1> 
+    <% end %>
+  
+  </body> 
+
+</html> 
