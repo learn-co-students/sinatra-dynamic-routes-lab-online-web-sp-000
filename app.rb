@@ -15,14 +15,21 @@ class App < Sinatra::Base
   get '/say/:number/:phrase' do 
     i = 0 
     @count = params[:number].to_i
+    @phrase = params[:phrase]
     while i < @count
-      params[:phrase]
+      @phrase
       i+=1
     end
   end
   
   get '/say/:word1/:word2/:word3/:word4/:word5' do 
-    params[:word1] + params[:word2] + params[:word3] + params[:word4] + params[:word5]
+    @sentence = []
+    @sentence << params[:word1] 
+    @sentence << params[:word2]
+    @sentence << params[:word3] 
+    @sentence << params[:word4]
+    @sentence << "#{params[:word5]}."
+    @sentence.join(" ")
   end
   
   get '/:operation/:number1/:number2' do 
