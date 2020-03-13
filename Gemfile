@@ -12,3 +12,4 @@ group :test, :development do
   gem 'rack-test'
   gem 'pry'
 end
+gem 'standardrb'
