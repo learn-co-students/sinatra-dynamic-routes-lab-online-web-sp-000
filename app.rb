@@ -37,26 +37,26 @@ class App < Sinatra::Base
     @num1 = params[:number1].to_i
     @num2 = params[:number2].to_i
     # @solution = @num1.send(@op, @num2)
-    @add = if @op == "+"
+    @add = if @op == "add"
       @num1 + @num2 
     end 
-    @sub = if @op == "-"
+    @sub = if @op == "subtract"
       @num2 - @num1 
     end 
-    @x = if @op == "*"
+    @x = if @op == "multiply"
       @num1 * @num2 
     end 
-    @div = if @op == "U+00F7"
+    @div = if @op == "divide"
       @num1 / @num2 
     end 
-
-    if @op == "+" 
+  # binding.pry
+    if @op == "add" 
       "#{@add.to_s}"
-    elsif @op == "-"
+    elsif @op == "subtract"
       "#{@sub.to_s}"
-    elsif @op == "*"
+    elsif @op == "multiply"
       "#{@x.to_s}"
-    elsif @op == "U+00F7"
+    elsif @op == "divide"
       "#{@div.to_s}"
     end
   end 
