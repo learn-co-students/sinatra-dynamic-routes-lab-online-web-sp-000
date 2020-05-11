@@ -44,6 +44,5 @@ class App < Sinatra::Base
     when "divide"
       "#{@one / @two}"
     end
-    #"#{@one} #{@two}"
   end
 end
