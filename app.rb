@@ -40,8 +40,10 @@ class App < Sinatra::Base
     num2 = params[:number2].to_i
     operation = params[:operation]
     
-    result = num1 operation num2
-    result = result.to_s
-    result
+    case operation
+    when "+"
+       results = num1 + num2 
+    when "-"
+      results = num1 - num2
   end
 end
