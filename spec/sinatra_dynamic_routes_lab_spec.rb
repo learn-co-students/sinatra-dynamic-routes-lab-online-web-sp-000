@@ -86,7 +86,7 @@ describe App do
   describe 'GET /:operation/:number1/:number2' do
     it 'adds two numbers together' do
       get '/add/215/93'
-
+      
       expect(last_response.status).to eq(200)
       expect(last_response.body).to include('308')
     end
