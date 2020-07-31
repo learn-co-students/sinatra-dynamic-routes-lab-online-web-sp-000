@@ -1,0 +1,16 @@
+<% phrase = params[:phrase] %>
+<% number = params[:number]%>
+<% word1 = params[:word1]  %>
+<% word2 = params[:word2]  %>
+<% word3 = params[:word3] %>
+<% word4 = params[:word4]  %>
+<% word5 = params[:word5] %>
+
+<%phrases = []%>
+<% number.to_i.times{phrases << phrase} %>
+<% phrases.each do |phrase| %>
+<h1><%= phrase %></h1>
+<% end %>
+
+<p> <%= "#{word1} #{word2} #{word3} #{word4} #{word5}." %></p>
+

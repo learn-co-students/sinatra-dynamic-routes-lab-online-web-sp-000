@@ -1,0 +1,14 @@
+<% num_1 = params[:number1].to_i%>
+<% num_2 = params[:number2].to_i%>
+<% operation = params[:operation]%>
+
+
+<% if operation == "add" %>
+   <p><%= num_1 + num_2 %></p>
+<% elsif operation == "subtract"%>
+   <p><%= num_1 - num_2%></p>
+<% elsif operation == "multiply" %>
+   <p><%= num_1 * num_2 %></p>
+<% elsif operation == "divide" %>
+   <p><%= num_1 / num_2 %></p>
+<%end%>
