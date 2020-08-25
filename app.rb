@@ -16,10 +16,11 @@ class App < Sinatra::Base
   #accepts a number and returns the square of that number. Note: Remember that values in params always come in as strings, and your return value for the route should also be a string (use .to_i and .to_s).
 
   get '/say/:number/:phrase' do
-    var += "whatever_that_phrase_is"
+    var += "phrase"
     params[:number].to_i.times do
-      binding.pry
+      var += params[:phrase]
     end
+    var
   end
   #accepts a number and a phrase and returns that phrase in a single string the number of times given.
 
