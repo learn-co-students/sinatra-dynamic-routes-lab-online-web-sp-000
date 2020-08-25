@@ -29,17 +29,21 @@ class App < Sinatra::Base
       #that accepts five words and returns a string containing all five words (i.e. word1 word2 word3 word4 word5).
   end
 
-  get '/operation/:number1/:number2' do
-    if params[:operation] == "+"
-      "#{params[:number].to_i}" + "#{params[:number].to_i} "
-    elsif params[:operation] == "-"
-      "#{:number}" - "#{:number}"
-    elsif params[:operation] == "*"
-      "#{:number}" * "#{:number}"
-    elsif  params[:operation] == "/"
-      "#{:number}" / "#{:number}"
-    else
-      "Not valid option"
+  get '/:operation/:number1/:number2' do
+    number1 = params[:number1].to_i
+    number2 = params[:number2].to_i
+
+    answer = 'Unable to perform this operation'
+
+    case params[:operation]
+    when 'add'
+      answer = (number1 + number2).to_s
+    when 'subtract'
+      answer = (number1 - number2).to_s
+    when 'multiply'
+      answer = (number1 * number2).to_s
+    when 'divide'
+      answer = (number1 / number2).to_s
     end
   end
   #accepts an operation (add, subtract, multiply or divide) and performs the operation on the two numbers provided, returning a String. For example, going to /add/1/2 should render 3 as a String.
