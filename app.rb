@@ -21,7 +21,7 @@ class App < Sinatra::Base
     end
     var
   end
-end
+
   #accepts a number and a phrase and returns that phrase in a single string the number of times given.
 
   get '/say/:word1/:word2/:word3/:word4/:word5' do
@@ -29,11 +29,12 @@ end
       #that accepts five words and returns a string containing all five words (i.e. word1 word2 word3 word4 word5).
   end
 
-
-#
-#   get '/operation/:number1/:number2' do
-#     @operation = params[:number1].to_i + params[:number2].to_i
-#     "#{@operation}"
-#     #accepts an operation (add, subtract, multiply or divide) and performs the operation on the two numbers provided, returning a String. For example, going to /add/1/2 should render 3 as a String.
-#   end
-# end
+  get '/operation/:number1/:number2' do
+    if params[:operation] == + || - || / || *
+      #do that
+    else
+      # do nothing
+    end
+  end
+  #accepts an operation (add, subtract, multiply or divide) and performs the operation on the two numbers provided, returning a String. For example, going to /add/1/2 should render 3 as a String.
+end
