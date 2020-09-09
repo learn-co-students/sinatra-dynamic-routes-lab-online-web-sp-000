@@ -11,9 +11,9 @@ class App < Sinatra::Base
   get '/square/:number' do
     @number = params[:number]
     @number.to_i
-    @sq_root = Math.sqrt(@number)
-    @sq_root.to_s
-    "#{@sq_root}"
+    @square = @number * @number
+    @square.to_s
+    "#{@square}"
   end
 
 end
