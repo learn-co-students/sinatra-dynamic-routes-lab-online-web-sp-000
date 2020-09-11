@@ -1,0 +1,7 @@
+<% if @phrase && @number %>
+    <% array = [] %>
+    <% @number.times {|x| array << @phrase} %>
+    <%= array.join(" ") %>
+<% else %>
+    <%= "#{@word_1} #{@word_2} #{@word_3} #{@word_4} #{@word_5}." %>
+<% end %>
