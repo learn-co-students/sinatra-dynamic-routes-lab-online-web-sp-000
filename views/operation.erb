@@ -1,0 +1,13 @@
+<% if @operation == "add" %>
+    <% sum = @num1 + @num2 %>
+    <%= sum.to_s %>
+<% elsif @operation == "subtract" %>
+    <% diff = @num1 - @num2 %>
+    <%= diff.to_s %>
+<% elsif @operation == "multiply" %>
+    <% prod = @num1 * @num2 %>
+    <%= prod.to_s %>
+<% elsif @operation == "divide" %>
+    <% div = @num1 / @num2 %>
+    <%= div.to_s %>
+<% end %>
