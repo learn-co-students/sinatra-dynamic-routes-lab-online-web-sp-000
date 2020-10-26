@@ -33,7 +33,7 @@ class App < Sinatra::Base
 
     # the easy way
 
-    "#{params[word1]} #{params[word2]} #{params[word3]} #{params[word4]} #{params[word5]}"
+    "#{params[:word1]} #{params[:word2]} #{params[:word3]} #{params[:word4]} #{params[:word5]}."
   end
 
   get "/:operation/:number1/:number2" do 
