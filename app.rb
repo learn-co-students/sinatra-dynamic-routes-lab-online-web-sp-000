@@ -47,7 +47,8 @@ class App < Sinatra::Base
         @solved= @number1 / @number2
         @solved.to_s
       end
-     # @solved = @number1.public_send(@operation, @number2)
+      #another way to solve:
+      #@solved = @number1.public_send(@operation, @number2)
       #@solved.to_s
     end
 
