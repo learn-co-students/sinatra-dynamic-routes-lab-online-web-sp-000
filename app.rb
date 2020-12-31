@@ -39,12 +39,19 @@ class App < Sinatra::Base
 
   get '/:operation/:number1/:number2' do 
     @operation = params[:operation]
-    @number1 = params[:number1]
-    @number2 = params[:number2]
-    #binding.pry
-    integer1 = @number1.to_i
-    integer2 = @number2.to_i
+    @number1 = params[:number1].to_i
+    @number2 = params[:number2].to_i
 
+    case @operation
 
+    when "add"
+      (@number1.to_i + @number2.to_i).to_s
+    when "subtract"
+       (@number1.to_i - @number2.to_i).to_s
+    when "multiply"
+       (@number1.to_i * @number2.to_i).to_s
+    when "divide"
+       (@number1.to_i / @number2.to_i).to_s
+    end
   end
 end
