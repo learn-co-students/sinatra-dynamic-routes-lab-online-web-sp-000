@@ -1,3 +1,14 @@
+  get '/say/:number/:phrase' do
+    @number= params[:number].to_i
+    @phrase= params[:phrase]
+    def repeat(@phrase, n= @number)
+      "#{{@phrase * n * }"
+    end
+    repeat(@phrase, n= @number)
+  end
+
+
+
 # Sinatra Dynamic Routes Lab
 
 ## Overview
