@@ -1,7 +1,9 @@
-ENV["SINATRA_ENV"] = "test"
 
-require_relative '../config/environment'
+
+require_relative '../config/environment.rb'
 require 'rack/test'
+ENV["SINATRA_ENV"] = "test"
+RACK_ENV = "test"
 
 RSpec.configure do |config|
   config.run_all_when_everything_filtered = true
