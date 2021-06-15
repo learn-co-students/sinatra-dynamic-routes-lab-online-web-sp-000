@@ -25,11 +25,23 @@ class App < Sinatra::Base
     @word3 = params[:word3] 
     @word4 = params[:word4]
     @word5 = params[:word5]
+    "#{@word1} #{@word2} #{@word3} #{@word4} #{@word5}."
   end 
   
-  get "/:operation/:number1/:number2"
-    @operation = params[:operation]
+  get "/:operation/:number1/:number2" do 
+    @addition = params[:addition]
+    @subtraction = params[:subtraction]
+    @multiplication = params[:multiplication]
+    @division = params[:division]
     @number1 = params[:number1]
     @number2 = params[:number2]
+    @addition = "#{@number1} + #{@number2}"
   end 
   
+  # get "/:addition/:number1/:number2" do
+  #     @addition = params[:addition]
+  #     @number1 = params[:number1]
+  #     @number2 = params[:number2]
+  #     @addition = "#{@number1} + #{@number2}"
+  # end 
+end 
